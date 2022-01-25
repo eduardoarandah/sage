@@ -66,3 +66,6 @@ collect(['setup', 'filters'])
 */
 
 add_theme_support('sage');
+
+require_once('app/settings-fields.php');
+require_once('app/settings.php');
