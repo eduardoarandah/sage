@@ -39,9 +39,9 @@ function sage_settings_image_option($name, $label, $settings, $section)
 
         // if image exists
         if (!empty($_FILES[$name]["tmp_name"])) {
-            $urls = wp_handle_upload($_FILES[$name], array('test_form' => FALSE));
-            if (!empty($urls["url"]))
-                return $urls["url"];
+            $id = media_handle_upload($name, 0);
+            if (!is_wp_error($id))
+                return $id;
         }
         // if deleting image
         elseif (!empty($_POST["$name-delete"])) {
@@ -63,7 +63,7 @@ function sage_settings_image_option_field($name)
     <?php if (get_option($name)) : ?>
         <p>
             <a href="<?php echo get_option($name); ?>" target="_blank">
-                <img src="<?php echo get_option($name); ?>" style="max-height: 200px;max-height:200px" />
+                <?php echo wp_get_attachment_image(get_option($name), 'thumbnail', false, ['class' => '']) ?>
             </a>
         </p>
         <p>
