@@ -43,7 +43,14 @@ require $composer;
 |
 */
 
-collect(['setup', 'filters'])
+collect([
+    'setup',
+    'filters',
+    'settings-fields',
+    'settings',
+    'Helpers',
+    'PostWidget',
+])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
             wp_die(
@@ -66,6 +73,3 @@ collect(['setup', 'filters'])
 */
 
 add_theme_support('sage');
-
-require_once('app/settings-fields.php');
-require_once('app/settings.php');
