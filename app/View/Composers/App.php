@@ -24,6 +24,7 @@ class App extends Composer
     {
         return [
             'siteName' => $this->siteName(),
+            'headerLogo' => $this->headerLogo(),
         ];
     }
 
@@ -35,5 +36,13 @@ class App extends Composer
     public function siteName()
     {
         return get_bloginfo('name', 'display');
+    }
+
+    public function headerLogo()
+    {
+        $logo =  get_option('header_logo');
+        if ($logo) {
+            return wp_get_attachment_image($logo, 'full', false, ['class' => '']);
+        }
     }
 }

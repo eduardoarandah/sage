@@ -11,9 +11,19 @@
     {!! get_search_form(false) !!}
   @endif
 
-  @while(have_posts()) @php(the_post())
-    @include('partials.content-search')
-  @endwhile
+  <div class="grid md:grid-cols-2 gap-8 justify-center">
+    @while(have_posts()) @php(the_post())
+      @include('partials.content-search')
+    @endwhile
+  </div>
 
-  {!! get_the_posts_navigation() !!}
+@if(function_exists('wp_pagenavi'))
+  @php(wp_pagenavi())
+  @else
+    {!! get_the_posts_navigation() !!}
+@endif
+@endsection
+
+@section('sidebar')
+  @include('sections.sidebar')
 @endsection

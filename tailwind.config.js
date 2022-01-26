@@ -2,11 +2,17 @@ module.exports = {
   content: ['./app/**/*.php', './resources/**/*.{php,vue,js}'],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        facebook: '#3977f2',
+        twitter: '#40a1f2',
+        whatsapp: '#43e676',
+      },
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };

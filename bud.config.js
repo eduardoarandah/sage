@@ -37,7 +37,7 @@ module.exports = (app) =>
      *
      * This is your local dev server.
      */
-    .proxy('http://example.test')
+    .proxy('http://wordpress.localhost')
 
     /**
      * Public path of application assets

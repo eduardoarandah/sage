@@ -28,6 +28,7 @@ function sage_settings_page()
 function sage_settings_fields_global()
 {
     add_settings_section("sage_settings", __("Global", "sage"), null, "sage_settings_global");
+    sage_settings_image_option("header_logo", __("Header logo", "sage"), "sage_settings_global", "sage_settings");
     sage_settings_check_option("show_share_buttons", __("Show share buttons", "sage"), "sage_settings_global", "sage_settings");
     sage_settings_image_option("default_image", __("Default image", "sage"), "sage_settings_global", "sage_settings");
 }

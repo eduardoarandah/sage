@@ -1,13 +1,18 @@
 <article @php(post_class())>
   <header>
-    <h1 class="entry-title">
+    <h1 class="entry-title text-3xl md:text-4xl lg:text-5xl font-title font-semibold mb-10 leading-tight">
       {!! $title !!}
     </h1>
-
-    @include('partials.entry-meta')
+    @include('partials.featured')
+    <div class="flex justify-center space-x-3 mt-3">
+      @include('partials.social-share')
+    </div>
+    <div class="mt-4">
+      @include('partials.entry-meta')
+    </div>
   </header>
 
-  <div class="entry-content">
+  <div class="entry-content mt-2 prose lg:prose-lg">
     @php(the_content())
   </div>
 

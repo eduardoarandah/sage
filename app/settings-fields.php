@@ -35,21 +35,22 @@ function sage_settings_check_option_field($name)
 
 function sage_settings_image_option($name, $label, $settings, $section)
 {
-    register_setting($section, $name,  function () use ($name) {
-
-        // if image exists
-        if (!empty($_FILES[$name]["tmp_name"])) {
-            $id = media_handle_upload($name, 0);
-            if (!is_wp_error($id))
-                return $id;
-        }
-        // if deleting image
-        elseif (!empty($_POST["$name-delete"])) {
-            return "";
-        }
-        // if nothing
-        return get_option($name);
-    });
+    register_setting($section, $name,  [
+        'sanitize_callback' => function () use ($name) {
+            // if image exists
+            if (!empty($_FILES[$name]["tmp_name"])) {
+                $id = media_handle_upload($name, 0);
+                if (!is_wp_error($id))
+                    return $id;
+            }
+            // if deleting image
+            elseif (!empty($_POST["$name-delete"])) {
+                return "";
+            }
+            // if nothing
+            return get_option($name);
+        },
+    ]);
     add_settings_field($name, $label, function () use ($name) {
         sage_settings_image_option_field($name);
     }, $settings, $section);

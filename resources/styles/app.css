@@ -1,3 +1,9 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@import 'utils.css';
+@import 'page-layout.css';
+@import 'wp-classes.css';
+@import 'comments.css';
+@import 'wp-pagenavi.css';
