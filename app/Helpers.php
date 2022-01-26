@@ -6,6 +6,10 @@ class Helpers
 {
     public static function excerptOrContent($post, $words)
     {
+        if (empty($words)) {
+            $words = 0;
+        }
+
         $excerpt = "";
 
         // if excerpt exists
