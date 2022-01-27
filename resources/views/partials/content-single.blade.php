@@ -5,7 +5,7 @@
     </h1>
     @include('partials.featured')
     <div class="flex justify-center space-x-3 mt-3">
-      @include('partials.social-share')
+      <x-social-share :post="get_post()"></x-social-share>
     </div>
     <div class="mt-4">
       @include('partials.entry-meta')

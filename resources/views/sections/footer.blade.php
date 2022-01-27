@@ -13,7 +13,9 @@
       @endif
     </nav>
 
-    <div class="flex justify-center space-x-6">@include('partials.social-icons')</div>
+    <div class="flex justify-center space-x-6">
+      <x-social-icons></x-social-icons>
+    </div>
 
     <p class="text-center text-base text-gray-400">
       &copy; {{ date('Y') }} All rights reserved.

@@ -17,7 +17,7 @@ function sage_settings_page()
         <form method="post" action="options.php" enctype="multipart/form-data">
             <?php settings_fields("sage_settings"); ?>
             <?php do_settings_sections("sage_settings_global"); ?>
-            <?php // do_settings_sections("sage_settings_posts"); ?>
+            <?php do_settings_sections("sage_settings_social"); ?>
             <?php submit_button(); ?>
         </form>
     </div>
@@ -35,13 +35,14 @@ function sage_settings_fields_global()
 
 add_action("admin_init", "sage_settings_fields_global");
 
-// post fields
-/* function sage_settings_fields_posts() */
-/* { */
-/*     add_settings_section("sage_settings", __("Posts", "sage"), null, "sage_settings_posts"); */
-/*     sage_settings_text_option("text_option2", __("Text option", "sage"), "sage_settings_posts", "sage_settings"); */
-/*     sage_settings_check_option("check_option2", __("Check option", "sage"), "sage_settings_posts", "sage_settings"); */
-/*     sage_settings_image_option("image_option2", __("Image option", "sage"), "sage_settings_posts", "sage_settings"); */
-/* } */
+// social fields
+function sage_settings_fields_social()
+{
+    add_settings_section("sage_settings", __("Posts", "sage"), null, "sage_settings_social");
+    sage_settings_text_option("facebook", __("Facebook", "sage"), "sage_settings_social", "sage_settings");
+    sage_settings_text_option("twitter", __("twitter", "sage"), "sage_settings_social", "sage_settings");
+    sage_settings_text_option("youtube", __("Youtube", "sage"), "sage_settings_social", "sage_settings");
+    sage_settings_text_option("instagram", __("Instagram", "sage"), "sage_settings_social", "sage_settings");
+}
 
-/* add_action("admin_init", "sage_settings_fields_posts"); */
+add_action("admin_init", "sage_settings_fields_social");
