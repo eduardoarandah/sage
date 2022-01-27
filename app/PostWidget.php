@@ -32,7 +32,8 @@ class PostWidget extends \WP_Widget
             if ($file == '.' || $file == '..') continue;
             $templates[] = basename($file);
         }
-        echo \Roots\view('widgets/post-widget', [
+        echo \Roots\view('widgets/post-widget-form', [
+            'title' => $this->form_field_values($instance, 'title', ''),
             'cat' => $this->form_field_values($instance, 'cat', ''),
             'author' => $this->form_field_values($instance, 'author', ''),
             'posts_per_page' => $this->form_field_values($instance, 'posts_per_page', '1'),
@@ -90,6 +91,8 @@ class PostWidget extends \WP_Widget
             }
             echo \Roots\view($template, [
                 'posts' => $posts,
+                'thumbnail_size' => $instance['thumbnail_size'],
+                'title' => $instance['title'],
             ])->render();
         }
     }

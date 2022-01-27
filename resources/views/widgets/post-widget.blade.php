@@ -1,5 +1,16 @@
 <p>
-  <label for="{{ $cat["id"] }}">Categoría</label>
+  <label for="{{ $title["id"] }}">{{ __('Title', 'sage') }}</label>
+  <input
+    type="text"
+    class="widefat"
+    id="{{ $title['id'] }}"
+    name="{{ $title['name'] }}"
+    value="{{ $title['value'] ?? $title['default'] }}"
+    >
+</p>
+
+<p>
+  <label for="{{ $cat["id"] }}">{{ __('Categoría', 'sage') }}</label>
   <br>
   @php
     wp_dropdown_categories([
@@ -13,7 +24,7 @@
 </p>
 
 <p>
-  <label for="{{ $author["id"] }}">Autor</label>
+  <label for="{{ $author["id"] }}">{{ __('Author', 'sage') }}</label>
   <br>
   @php
     wp_dropdown_users([
@@ -26,9 +37,9 @@
 </p>
 
 <p>
-  <label for="{{ $posts_per_page["id"] }}">Cantidad de notas</label>
+  <label for="{{ $posts_per_page["id"] }}">{{ __('Number of posts', 'sage') }}</label>
   <input
-    type="text"
+    type="number"
     class="widefat"
     id="{{ $posts_per_page['id'] }}"
     name="{{ $posts_per_page['name'] }}"
@@ -39,7 +50,7 @@
 <p>
   <label for="{{ $offset["id"] }}">Omitir cuántas notas</label>
   <input
-    type="text"
+    type="number"
     class="widefat"
     id="{{ $offset['id'] }}"
     name="{{ $offset['name'] }}"
@@ -48,7 +59,7 @@
 </p>
 
 <p>
-  <label for="{{ $thumbnail_size["id"] }}">Tamaño de imagen</label>
+  <label for="{{ $thumbnail_size["id"] }}">{{ __('Image size', 'sage') }}</label>
   <br>
   <select
     id="{{ $thumbnail_size['id'] }}"
@@ -67,9 +78,9 @@
 </p>
 
 <p>
-  <label for="{{ $excerpt_words["id"] }}">Longitud del resumen en numero de palabras</label>
+  <label for="{{ $excerpt_words["id"] }}">{{ __('Excerpt length', 'sage') }}</label>
   <input
-    type="text"
+    type="number"
     class="widefat"
     id="{{ $excerpt_words['id'] }}"
     name="{{ $excerpt_words['name'] }}"
@@ -78,13 +89,13 @@
 </p>
 
 <p>
-  <label for="{{ $structure_file["id"] }}">Estructura</label>
+  <label for="{{ $structure_file["id"] }}">{{ __('Structure', 'sage') }}</label>
   <br>
   <select
     id="{{ $structure_file['id'] }}"
     name="{{ $structure_file['name'] }}"
     >
-    <option value="">Seleccionar</option>
+    <option value="">{{ __('Select', 'sage') }}</option>
     @foreach ($templates as $template)
       <option
         value="{{ $template }}"
