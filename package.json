@@ -30,6 +30,7 @@
     "@roots/bud-stylelint": "^5.2.0",
     "@roots/bud-tailwindcss": "^5.2.0",
     "@roots/sage": "^5.2.0",
-    "@tailwindcss/typography": "^0.5.0"
+    "@tailwindcss/typography": "^0.5.0",
+    "blade-formatter": "^1.17.1"
   }
 }
