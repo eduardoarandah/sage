@@ -7,7 +7,7 @@
     </svg>
   </label>
 
-  <div x-show="open" @click.outside="open = false" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" class="absolute bg-white border-gray-700 p-4 right-0 shadow-md top-full w-96">
+  <div x-show="open" @click.outside="open = false" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-90" class="absolute bg-white border-gray-700 p-4 right-0 shadow-md top-full w-96 z-20">
     <form role="search" method="get" class="search-form" action="{{ home_url('/') }}">
       <div class="border border-gray-200 flex flex-col md:flex-row">
         <div class="flex flex-1 items-center md:w-2/3 px-4 rounded w-full">
