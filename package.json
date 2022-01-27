@@ -19,7 +19,7 @@
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint resources/scripts",
     "lint:css": "stylelint \"resources/**/*.{css,scss,vue}\"",
-    "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --ignore-domain --include=\"app,resources\"",
+    "translate:pot": "wp acorn view:cache && cp -r ../../cache/acorn/framework/views ./viewscache && wp i18n make-pot . ./resources/lang/sage.pot --ignore-domain --include='app,viewscache' && rm -rf viewscache",
     "test": "npm run lint"
   },
   "devDependencies": {

@@ -3,17 +3,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Sage Starter Theme 10.0.0-dev\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/sage\n"
-"POT-Creation-Date: 2022-01-25T22:08:45+00:00\n"
-"PO-Revision-Date: 2022-01-25 16:09-0600\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/notiviral\n"
+"POT-Creation-Date: 2022-01-27T19:29:02+00:00\n"
+"PO-Revision-Date: 2022-01-27 13:49-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Theme Name of the theme
 msgid "Sage Starter Theme"
@@ -37,11 +37,19 @@ msgstr ""
 
 #: app/filters.php:15
 msgid "Continued"
+msgstr "Continúa"
+
+#: app/PostWidget.php:11
+msgid "&raquo; Post Widget"
 msgstr ""
 
-#: app/settings-fields.php:71
-msgid "Delete image?"
+#: app/PostWidget.php:13
+msgid "A block of posts"
 msgstr ""
+
+#: app/settings-fields.php:72
+msgid "Delete image?"
+msgstr "Borrar imagen?"
 
 #: app/settings.php:8
 msgid "Theme options"
@@ -49,58 +57,128 @@ msgstr "Opciones del tema"
 
 #: app/settings.php:30
 msgid "Global"
-msgstr "Global"
+msgstr ""
 
-#: app/settings.php:31 app/settings.php:42
-msgid "Text option"
-msgstr "Opción de texto"
+#: app/settings.php:31
+msgid "Header logo"
+msgstr "Logo del encabezado"
 
-#: app/settings.php:32 app/settings.php:43
-msgid "Check option"
-msgstr "Opción checkbox"
+#: app/settings.php:32
+msgid "Show share buttons"
+msgstr "Mostrar botones de compartir"
 
-#: app/settings.php:33 app/settings.php:44
-msgid "Image option"
-msgstr "Opción de imagen"
+#: app/settings.php:33
+msgid "Default image"
+msgstr "Imagen default"
 
 #: app/settings.php:41
 msgid "Posts"
-msgstr "Publicaciones"
+msgstr ""
+
+#: app/settings.php:42
+msgid "Facebook"
+msgstr ""
+
+#: app/settings.php:43
+msgid "twitter"
+msgstr ""
+
+#: app/settings.php:44
+msgid "Youtube"
+msgstr ""
+
+#: app/settings.php:45
+msgid "Instagram"
+msgstr ""
 
 #: app/setup.php:58
 msgid "Primary Navigation"
 msgstr ""
 
-#: app/setup.php:180
+#: app/setup.php:59
+msgid "Footer Navigation"
+msgstr ""
+
+#: app/setup.php:181
 msgid "Primary"
 msgstr ""
 
-#: app/setup.php:185
+#: app/setup.php:186
 msgid "Footer"
+msgstr ""
+
+#: app/setup.php:191
+msgid "Top"
+msgstr ""
+
+#: app/setup.php:197
+msgid "Header"
 msgstr ""
 
 #: app/View/Composers/Post.php:48
 msgid "Latest Posts"
-msgstr ""
+msgstr "Últimas publicaciones"
 
 #. translators: %s is replaced with the search query
 #: app/View/Composers/Post.php:58
 msgid "Search Results for %s"
-msgstr ""
+msgstr "Resultados de búsqueda para %s"
 
 #: app/View/Composers/Post.php:64
 msgid "Not Found"
-msgstr ""
+msgstr "No econtrado"
 
-#: functions.php:15
-msgid "Error locating autoloader. Please run <code>composer install</code>."
-msgstr ""
+#: viewscache/037feb27e8a18894b01267a38d13794dc6e84ae0.php:3
+msgctxt "label"
+msgid "Search for:"
+msgstr "Buscar:"
 
-#. translators: %s is replaced with the relative file path
-#: functions.php:51
-msgid "Error locating <code>%s</code> for inclusion."
-msgstr ""
+#: viewscache/037feb27e8a18894b01267a38d13794dc6e84ae0.php:12
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Buscar &hellip;"
 
-#. Template Name of the theme
-msgid "Custom Template"
-msgstr ""
+#: viewscache/037feb27e8a18894b01267a38d13794dc6e84ae0.php:14
+msgid "Search"
+msgstr "Buscar"
+
+#: viewscache/65c9edf5b9aeb57aad6f2f48ffeb408333058098.php:2
+msgid "Skip to content"
+msgstr "Ir al contenido"
+
+#: viewscache/192bb7d84e13493a6f298518143674cd870b00e0.php:3
+#: viewscache/8158e7d66e89600a0ff0ef2193b57b1489901463.php:31
+msgid "Pages:"
+msgstr "Páginas"
+
+#: viewscache/193bee5ae10c477a1c3c30573e76df199352fbbd.php:11
+#: viewscache/ab28feec77c85e5485363e1ed262ecf33fd0adb2.php:11
+msgid "Sorry, no results were found."
+msgstr "No se encontraron resultados."
+
+#: viewscache/8158e7d66e89600a0ff0ef2193b57b1489901463.php:38
+msgid "Keywords"
+msgstr "Palabras clave"
+
+#: viewscache/b665d01936bf4b01c0daaec64830b4158cfd3c92.php:5
+msgctxt "comments title"
+msgid "One response to &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s responses to &ldquo;%2$s&rdquo;"
+msgstr[0] "Una respuesta a &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s respuestas a &ldquo;%2$s&rdquo;"
+
+#: viewscache/b665d01936bf4b01c0daaec64830b4158cfd3c92.php:19
+msgid "&larr; Older comments"
+msgstr "&larr; Comentarios anteriores"
+
+#: viewscache/b665d01936bf4b01c0daaec64830b4158cfd3c92.php:26
+msgid "Newer comments &rarr;"
+msgstr "Comentarios siguientes &rarr;"
+
+#: viewscache/b665d01936bf4b01c0daaec64830b4158cfd3c92.php:42
+msgid "Comments are closed."
+msgstr "Comentarios cerrados"
+
+#: viewscache/f1afaa5fa42065bb33954b8c18459ac3f5078b61.php:11
+msgid "Sorry, but the page you are trying to view does not exist."
+msgstr "Lo sentimos, pero la página que intentas ver no existe."
