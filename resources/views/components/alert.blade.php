@@ -1,3 +1,5 @@
 <div {{ $attributes->merge(['class' => $type]) }}>
-  {!! $message ?? $slot !!}
+  <div class="p-4 text-2xl">
+    {!! $message ?? $slot !!}
+  </div>
 </div>
