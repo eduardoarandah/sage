@@ -50,6 +50,7 @@ collect([
     'settings',
     'Helpers',
     'PostWidget',
+    'scripts'
 ])
     ->each(function ($file) {
         if (! locate_template($file = "app/{$file}.php", true, true)) {
